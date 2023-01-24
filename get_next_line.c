@@ -79,7 +79,7 @@ char	*get_next_line(int fd)
 	static char	*dst;
 	char		*line;
 
-	if (fd < 0 || fd > OPEN_MAX || BUFFER_SIZE <= 0)
+	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
 	dst = read_it(fd, dst);
 	if (!dst)
